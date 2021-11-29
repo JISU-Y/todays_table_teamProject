@@ -2,24 +2,18 @@
 <html lang="ko">
   <head>
     <title>오늘의 식탁</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta charset="UTF-8" />
-    <meta property="og:site_name" content="오늘의 식탁">
-    <meta property="og:title" content='마이페이지'>
-    <meta property="og:image" content="../static/imgs/og_image.png">
-    <meta property="og:description" content="건강한 음식을 추천해드려요!">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://todays-table.shop">
+    <meta property="og:site_name" content="오늘의 식탁" />
+    <meta property="og:title" content="마이페이지" />
+    <meta property="og:image" content="../static/imgs/og_image.png" />
+    <meta property="og:description" content="건강한 음식을 추천해드려요!" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://todays-table.shop" />
 
     <!-- 구글폰트 -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Stylish&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet" />
 
     <!-- css -->
     <link rel="stylesheet" href="/static/styles/main.css" />
@@ -28,10 +22,7 @@
     <link rel="icon" href="../static/imgs/favicon.ico" />
 
     <!-- font awesome 추가 -->
-    <script
-      src="https://kit.fontawesome.com/28653e43c1.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/28653e43c1.js" crossorigin="anonymous"></script>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -51,9 +42,7 @@
         </a>
       </h1>
       <div tabindex="0" class="user">
-        <span class="user-name"
-          ><span class="user-name-db">{{ nickname }} </span>님</span
-        >
+        <span class="user-name"><span class="user-name-db">{{ nickname }} </span>님</span>
         <img src="../static/{{ user_pic }}" alt="프로필" />
         <div class="nav">
           <div onclick="userpage()">마이페이지</div>
@@ -79,26 +68,18 @@
           </div>
           {% endfor %}
         </div>
-        <button class="recommend-btn" onclick="show_modal()">
-          마음에 드는 게 없다면?
-        </button>
+        <button class="recommend-btn" onclick="show_modal()">마음에 드는 게 없다면?</button>
       </div>
       <div class="list-container">
         <h2>건강한 레시피를 찾아보세요!</h2>
         <h4>원하시는 재료를 검색해서 건강한 음식을 찾아보세요!</h4>
         <form class="search-form">
-          <input
-            type="text"
-            class="search-input"
-            id="input"
-            placeholder="재료 입력"
-          />
+          <input type="text" class="search-input" id="input" placeholder="재료 입력" />
           <button type="submit" class="search-btn">찾기</button>
         </form>
         <div class="dish-lists" id="ds">
-          {% for dish in dishes %} {% set class_heart = "" %} {% if
-          dish["like_by_me"] %} {% set class_heart = "fa-heart" %} {% else %} {%
-          set class_heart = "fa-heart-o" %} {% endif %}
+          {% for dish in dishes %} {% set class_heart = "" %} {% if dish["like_by_me"] %} {% set class_heart = "fa-heart" %} {% else %} {% set
+          class_heart = "fa-heart-o" %} {% endif %}
           <div id="{{ dish.no }}" class="dish">
             <a href="/detail/{{ dish.no }}">
               <div class="img-wrap">
@@ -109,11 +90,7 @@
                 <h3 class="dish-name">{{ dish.menu_name }}</h3>
               </div>
             </a>
-            <a
-              class="level-item"
-              aria-label="heart"
-              onclick="toggle_like('{{ dish.no }}', 'heart')"
-            >
+            <a class="level-item" aria-label="heart" onclick="toggle_like('{{ dish.no }}', 'heart')">
               <i class="fa {{ class_heart }}" aria-hidden="true"></i>
               <span class="like-num">{{ dish.count_like }}</span>
             </a>
@@ -131,12 +108,7 @@
               <div class="questions-container">
                 <h3 class="question">Q1. 밥 vs 디저트</h3>
                 <label class="box-radio-input">
-                  <input
-                    type="radio"
-                    name="item_type"
-                    value="밥"
-                    checked="checked"
-                  />
+                  <input type="radio" name="item_type" value="밥" checked="checked" />
                   <span>밥</span>
                 </label>
                 <label class="box-radio-input">
@@ -147,12 +119,7 @@
               <div class="questions-container">
                 <h3 class="question">Q2. 고단백 vs 저염식</h3>
                 <label class="box-radio-input">
-                  <input
-                    type="radio"
-                    name="item_healthy"
-                    value="저염"
-                    checked="checked"
-                  />
+                  <input type="radio" name="item_healthy" value="저염" checked="checked" />
                   <span>저염</span>
                 </label>
                 <label class="box-radio-input">
@@ -163,12 +130,7 @@
               <div class="questions-container">
                 <h3 class="question">Q3. 다이어트식 vs 보양식</h3>
                 <label class="box-radio-input">
-                  <input
-                    type="radio"
-                    name="item_cal"
-                    value="다이어트식"
-                    checked="checked"
-                  />
+                  <input type="radio" name="item_cal" value="다이어트식" checked="checked" />
                   <span>다이어트식</span>
                 </label>
                 <label class="box-radio-input"
