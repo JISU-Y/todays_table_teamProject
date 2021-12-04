@@ -11,26 +11,25 @@
 - my page에서 본인이 작성한 댓글 확인 및 삭제가 가능합니다.
 - my page에서 본인의 프로필 사진을 바꿀 수 있습니다.
 
- 🧁URL : http://todays-table.shop/
- 시연영상 : https://www.youtube.com/watch?v=j9MvdwPx12o
+🧁URL : http://todays-table.shop/ <br />
+
+시연영상 : https://www.youtube.com/watch?v=j9MvdwPx12o
 
 <br />
 
 ![preview](./static/imgs/preview.png)
 
-
+![모바일](./static/imgs/mobile.png)
 
 <br />
 
-## 👨‍👨‍👧‍👧  팀원
+## 👨‍👨‍👧‍👧 팀원
 
 명단: 오규화, 김남경, 유지수, 이재정
 
 기간: 2021.11.01 ~ 2021.11.05
 
 <br />
-
-
 
 ## 📚 기술 스택
 
@@ -49,7 +48,6 @@
 #### deploy
 
 - AWS EC2
-
 
 <br />
 
